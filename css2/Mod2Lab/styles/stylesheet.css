@@ -1,0 +1,372 @@
+/*
+Color List:
+- light blue = 00AEEF;
+- dark blue = 1C75BC
+- green = 8DC63F
+- dark green = 009444
+- orange = F7941E
+- dark orange = F15A29
+- brown = 594a42;
+*/
+
+/***************************
+****************************
+Reset
+****************************
+***************************/
+@import 'normalize.css';
+
+/* Change all elements to use border-box */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/***************************
+****************************
+Base Styles
+****************************
+***************************/
+
+
+/***************************
+****************************
+Layout Styles
+****************************
+***************************/
+/* Content Container*/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+/* Row */
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+/* Row Clear Float*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Media Query excludes extra small devices and includes small and above */
+[class*='col-'] {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 48em) {
+  [class*='col-'] {
+    float: left;
+  }
+  /* Column Two Thirds */
+  .col-2-3 {
+    width: 66.6666%;
+  }
+  /* Column Third */
+  .col-1-3 {
+    width: 33.3333%;
+  }
+  .col-1-2 {
+    width: 50%;
+}
+}
+
+@media (min-width: 48em) {
+  .pull-right-sm {
+    float:right;
+  }
+}
+
+@media only screen and (max-width : 47.9375em) {
+  .remove-gutter-xs {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/***************************
+****************************
+Modules
+****************************
+***************************/
+/*Button Modules*/
+.btn{
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 12px 30px;
+  font-size: 1.313em;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease 0s;
+  }
+  .btn-primary{
+    background: #8DC63F;
+    border-color: #8DC63F;
+    color: white;
+  }
+  .btn-primary:hover{
+    background: none;
+    border-color: white;
+    text-decoration: none;
+  }
+  .btn-nav {
+    color: white;
+}
+.btn-toggle-menu{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.btn-hero{
+  background-color: none;
+  border: 1px #ffffff solid;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: "Arial regular" , sans-serif;
+  font-size: 28pt;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.btn-hero:hover{
+  background-color: #ffffff;
+  color: #39B54A;
+  opacity: .5;
+}
+.btn-hero:click{
+  background-color: #ffffff;
+  color: #39B54A;
+  opacity: .5;
+}
+@media (min-width:48em){
+.btn-toggle-menu{
+  display: none;
+}
+.btn-nav{
+  padding 15px 10 px;
+  font-size: 1.125em;
+  font-family: "Arial regular", sans-serif;
+  font-size: 18pt;
+}
+.btn-nav:hover {
+  opacity: .5;
+background-color: none;
+}
+.btn-nav:click {
+  opacity: .5;
+  background-color: none;
+}
+}
+
+  /*Heaser Module*/
+  .header-primary{
+    background: #9B8579;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  /*Logo Modules*/
+.logo {
+    overflow: hidden;
+    display: inline-block;
+}
+.logo-primary {
+    width: 64px;
+    height: 64px;
+}
+.logo-primary img {
+    height: 100%;
+}
+/*Navigation Modules*/
+.nav > ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.nav-primary {
+    margin-top: 35px;
+    display: none;
+}
+@media(min-width: 48em){
+  .nav-primary{
+    display: block;
+  }
+}
+/*Hero Modules*/
+.hero {
+    text-align: center;
+}
+.hero-primary {
+    background-color: #594a42;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.hero-title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 2.625em;
+}
+.hero-subtitle {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 1.500em;
+    font-weight: normal;
+}
+.hero-subtitle + button {
+    margin-top: 25px;
+}
+
+/*Background Modules*/
+.bg-image  {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.bg-image > img {
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    min-width: 100%;
+}
+.hero-primary.bg-image > img {
+    opacity: 0.55;
+}
+.hero-body {
+    position: relative;
+}
+
+/*Media Object Module*/
+.media, .media-body {
+    overflow:hidden;
+}
+.media-item {
+  float:left;
+  margin-right: 10px;
+ 
+}
+.media-item i {
+  color: #594a42;
+  font-size: 5em;
+  padding-top: 30px;
+ 
+}
+.media-body{
+ padding-left: 20px;
+ padding-right: 20px;
+ text-align: left;
+ font-size: 1.2em;
+}
+.media-body>p{
+  line-height: 200%;
+}
+.btn-media{
+  height: 50px;
+  width: 300px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.row-media{
+  padding-bottom: 40px;
+  padding-top: 40px;
+  display: inline-block;
+}
+@media(min-width: 48em){
+.btn-media{
+  height: 40px;
+  width: 100px;
+  font-size: 1em;
+  padding: 12px;
+}
+}
+@media(max-width: 47.999em){
+  .col-xs-1{
+    width:100%;
+    min-height: 696px;
+  }
+    .media-body>p, .media-body>h4{
+      font-size: 1.5em;
+  }
+  .media-item {
+    padding-top: 15px;
+  }
+}
+/*Testimonial module*/
+.testimonial{
+  min-height: 460px;
+  text-align: center;
+  position: relative;
+}
+.testimonial-star{
+  padding-top: 40px;
+  padding-bottom: 50px;
+  
+}
+.testimonial-star i{
+  font-size: 4em;
+  color: #fff;
+  padding-right: 20px;
+}
+.testimonial-body{
+  color: #fff;
+  line-height: 200%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  font-size: 18pt;
+}
+@media(min-width: 48em){
+  .testimonial{
+    min-height: 400px;
+  }
+  .testimonial-star{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .testimonial-body{
+    padding-bottom: 60px;
+  }
+}
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+.background-primary {
+  background: #F7941E;
+}
+.background-secondary {
+  background: #00AEEF;
+}
+.background-tertiary {
+  background: #8DC63F;
+}
+.background-quaternary {
+  background: #594a42;
+}
+.background-quinary {
+    background: #e7e1d7;
+}
+.background-quinta{
+    background: #007849;
+}
+.background-media{
+  background-color: #C2B59B;
+}

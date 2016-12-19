@@ -1,0 +1,14 @@
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Nationality</th>
+        <th>Dates</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="author in vm.persons">
+        <td>{{author.name}}</td>
+        <td>{{author.nationality}}</td>
+        <td>{{author.dates}}</td>
+        <td><button ng-click="action()" class="btn btn-primary">Details</button></td>
+    </tr>
+</table>

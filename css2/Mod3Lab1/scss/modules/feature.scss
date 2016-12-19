@@ -1,0 +1,16 @@
+.feature-content{
+    position: relative;
+}
+.btn-feature-secondary{
+    background: $orange;
+    border-color: $orange;
+    color: white;
+}
+.btn-feature-tertiary{
+    background: $brown;
+    border-color: $brown;
+    color: white;
+}
+.feature-content img {
+    max-height: 204px;
+}
