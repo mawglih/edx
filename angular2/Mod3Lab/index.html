@@ -20,8 +20,11 @@
         <button type="button" class="btn btn-warning" ng-click="vm.addWarning()">Add Warning</button>
         <button type="button" class="btn btn-danger" ng-click="vm.addDanger()">Add Danger</button>
     </div>
+    <div >
     <div style="display:inline-block; min-height:290px;">
-      <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+      <div uib-datepicker  datepicker-options="vm.dateOptions" ng-model="vm.dt" class="well well-sm"></div>
+      <pre><em>{{vm.dt | date:'fullDate' }}</em></pre>
+    </div>
     </div>
     <uib-alert class="alert-animation" ng-repeat="alert in vm.alerts" type="{{alert.type}}" close="vm.dismissAlert($index)">{{alert.text}}</uib-alert>
     </div>

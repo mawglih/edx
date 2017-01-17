@@ -6,17 +6,20 @@
   $scope.today = function() {
     $scope.dt = new Date();
   };
-  $scope.today();
+  
 
   $scope.clear = function() {
     $scope.dt = null;
   };
-
-  $scope.options = {
-    customClass: getDayClass,
-    minDate: new Date(),
-    showWeeks: true
+  $scope.minDate = date.setDate((new Date()).getDate());
+  $scope.showWeeks= false;
+  
+  $scope.setDate = function(year, month, day) {
+  $scope.dt = new Date(year, month, day);
   };
+ 
     }
     ]);
 })();
+
+

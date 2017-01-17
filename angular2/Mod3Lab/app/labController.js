@@ -8,7 +8,17 @@
         vm.addDanger = addDanger;
         vm.addWarning = addWarning;
         vm.dismissAlert = dismissAlert;
+        vm.today = function() {
+        vm.dt = new Date();
+        };
+       
 
+        
+        vm.dateOptions={
+            showWeeks:false,
+            minDate:new Date()
+        };
+        
         function addDanger() {
         addAlert('danger', 'Danger, Will Robinson! Danger!');
         }
@@ -26,4 +36,5 @@
         }
     }
     ]);
+     
 })();
